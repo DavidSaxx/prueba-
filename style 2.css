@@ -1,0 +1,222 @@
+/* === ESTILOS REUTILIZABLES PARA RESEÑAS/BIOGRAFÍAS - MOBILE FIRST === */
+
+/* Contenedor principal */
+.reseña-seccion {
+  padding: 2rem 1rem;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Contenedor interno para centrar contenido */
+.contenedor-reseña {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+/* Título principal */
+.reseña-titulo {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #005e8e;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.reseña-titulo-sonata {
+  font-family: 'MonteCarlo', cursive;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #005e8e;
+  position: relative;
+  padding-bottom: 0.5rem;
+  text-transform: none;
+  line-height: 1.2;
+}
+
+.ONLINE {
+  font-family: 'Roboto Slab', serif;
+  color: #f5d795;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.imagen-titulo {
+  display: flex;
+  width: 90%;
+  height: auto;
+  margin: 0 4vh;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-titulo img {
+  max-width: 95%;
+  height: auto;
+}
+
+.reseña-titulo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: #d4a762;
+}
+
+/* Contenedor flexible para texto e imagen */
+.reseña-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Texto de la reseña */
+.reseña-texto {
+  flex: 1;
+}
+
+.reseña-parrafo {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* Cita destacada */
+.reseña-cita {
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-left: 3px solid #d4a762;
+  background-color: #f8f9fa;
+  font-style: italic;
+  color: #555;
+}
+
+.reseña-cita p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.reseña-cita-autor {
+  font-weight: 600;
+  color: #005e8e;
+  font-style: normal;
+}
+
+/* Imagen de la reseña */
+.reseña-imagen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reseña-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.8rem;
+}
+
+.reseña-pie-foto {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Sección de destacados */
+.reseña-destacados {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.destacado-item {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-top: 2px solid #d4a762;
+  transition: all 0.3s ease;
+}
+
+.destacado-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-top: 3px solid #f5d795;
+  cursor: pointer;
+}
+
+.destacado-titulo {
+  color: #005e8e;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.destacado-texto {
+  color: #555;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+/* === MEDIA QUERIES PARA PANTALLAS MÁS GRANDES === */
+@media (min-width: 480px) {
+  .reseña-seccion {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .reseña-titulo {
+    font-size: 2rem;
+  }
+  
+  .reseña-titulo-sonata {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .reseña-contenido {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .reseña-destacados {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reseña-titulo {
+    font-size: 2.5rem;
+  }
+  
+  .reseña-titulo-sonata {
+    font-size: 6rem;
+  }
+  
+  .destacado-item:hover {
+    transform: translateY(-8px);
+  }
+}
+
+@media (min-width: 992px) {
+  .reseña-seccion {
+    padding: 4rem 2rem;
+  }
+  
+  .reseña-titulo-sonata {
+    font-size: 7.5rem;
+  }
+}
